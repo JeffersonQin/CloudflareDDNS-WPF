@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MahApps.Metro.Controls;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,11 +20,31 @@ namespace CloudFlareDDNS_WPF
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = CfDdnsProperty.SHOW_NAME;
         }
+
+        private void LaunchGitHubSite(object sender, RoutedEventArgs e)
+        {
+            // Launch the GitHub site...
+            var psi = new ProcessStartInfo
+            {
+                FileName = CfDdnsProperty.HOME_PAGE,
+                UseShellExecute = true
+            };
+            Process.Start(psi);
+        }
+        private void LaunchAboutWindow(object sender, RoutedEventArgs e)
+        {
+            // Launch the About Window
+            AboutWindow aboutWindow = new AboutWindow();
+            aboutWindow.Show();
+        }
+
+
     }
 }

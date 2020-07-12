@@ -1,20 +1,20 @@
 ﻿CloudFlareDDNS-WPF
-
+1.0.0.0
 
 winexe
 C#
 .cs
-C:\Users\wangs\source\repos\JeffersonQin\CloudflareDDNS-WPF\CloudFlareDDNS-WPF\CloudFlareDDNS-WPF\obj\Debug\netcoreapp3.1\
+C:\Users\JeffersonQin\Documents\Coding\CloudflareDDNS-WPF\CloudFlareDDNS-WPF\CloudFlareDDNS-WPF\obj\Debug\netcoreapp3.1\
 CloudFlareDDNS_WPF
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\wangs\source\repos\JeffersonQin\CloudflareDDNS-WPF\CloudFlareDDNS-WPF\CloudFlareDDNS-WPF\App.xaml
-11151548125
+C:\Users\JeffersonQin\Documents\Coding\CloudflareDDNS-WPF\CloudFlareDDNS-WPF\CloudFlareDDNS-WPF\App.xaml
+22112506696
 
-4680993075
-1921654412462
-MainWindow.xaml;
+71986168895
+217-601396169
+AboutWindow.xaml;MainWindow.xaml;
 
 False
 

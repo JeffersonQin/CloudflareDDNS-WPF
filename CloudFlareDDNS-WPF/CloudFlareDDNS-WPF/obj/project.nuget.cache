@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "lX9ZuGYug9tj5bv0kW97SrF+ibG7vWfTl00vjB89tGHwlF1yqIpf+IahwIp8OjcLj1/HsqUNMbBjyeTOA/b6kw==",
+  "dgSpecHash": "5+FnadYP/XjJNv5y+6Tv5XyNgoK6O73Ex9HFYlwCe9Jxv5SrptqLicYoKvpHKNpmrHb3P1R1i8MRgcqsaPrBcw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\wangs\\source\\repos\\JeffersonQin\\CloudflareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\JeffersonQin\\Documents\\Coding\\CloudflareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JeffersonQin\\.nuget\\packages\\controlzex\\4.3.1\\controlzex.4.3.1.nupkg.sha512",
+    "C:\\Users\\JeffersonQin\\.nuget\\packages\\mahapps.metro\\2.1.1\\mahapps.metro.2.1.1.nupkg.sha512",
+    "C:\\Users\\JeffersonQin\\.nuget\\packages\\mahapps.metro.iconpacks\\4.3.0\\mahapps.metro.iconpacks.4.3.0.nupkg.sha512",
+    "C:\\Users\\JeffersonQin\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
+    "C:\\Users\\JeffersonQin\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+  ],
   "logs": []
 }

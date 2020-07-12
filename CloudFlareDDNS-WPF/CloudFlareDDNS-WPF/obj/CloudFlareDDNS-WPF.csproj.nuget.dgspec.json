@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wangs\\source\\repos\\JeffersonQin\\CloudflareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF.csproj": {}
+    "C:\\Users\\JeffersonQin\\Documents\\Coding\\CloudflareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wangs\\source\\repos\\JeffersonQin\\CloudflareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF.csproj": {
+    "C:\\Users\\JeffersonQin\\Documents\\Coding\\CloudflareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wangs\\source\\repos\\JeffersonQin\\CloudflareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF.csproj",
+        "projectUniqueName": "C:\\Users\\JeffersonQin\\Documents\\Coding\\CloudflareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF.csproj",
         "projectName": "CloudFlareDDNS-WPF",
-        "projectPath": "C:\\Users\\wangs\\source\\repos\\JeffersonQin\\CloudflareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF.csproj",
-        "packagesPath": "C:\\Users\\wangs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wangs\\source\\repos\\JeffersonQin\\CloudflareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF\\obj\\",
+        "projectPath": "C:\\Users\\JeffersonQin\\Documents\\Coding\\CloudflareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF.csproj",
+        "packagesPath": "C:\\Users\\JeffersonQin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JeffersonQin\\Documents\\Coding\\CloudflareDDNS-WPF\\CloudFlareDDNS-WPF\\CloudFlareDDNS-WPF\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\wangs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\JeffersonQin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -41,6 +41,16 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "MahApps.Metro": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "MahApps.Metro.IconPacks": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -59,7 +69,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
