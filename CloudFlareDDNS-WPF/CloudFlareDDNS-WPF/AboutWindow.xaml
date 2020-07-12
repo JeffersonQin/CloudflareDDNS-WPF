@@ -9,7 +9,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="About" Height="300" Width="200">
-    <Grid>
-
-    </Grid>
+    <StackPanel>
+        <Image Source="/Images/CloudflareDDNS.png"></Image>
+    </StackPanel>
 </mah:MetroWindow>

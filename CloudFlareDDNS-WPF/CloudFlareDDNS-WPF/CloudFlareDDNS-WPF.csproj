@@ -5,7 +5,13 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>CloudFlareDDNS_WPF</RootNamespace>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>CloudflareDDNS.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="CloudflareDDNS.ico" />
+    <None Remove="CloudflareDDNS.png" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MahApps.Metro" Version="2.1.1" />
@@ -13,6 +19,13 @@
     <PackageReference Include="MaterialDesignColors" Version="1.2.6" />
     <PackageReference Include="MaterialDesignThemes" Version="3.1.3" />
     <PackageReference Include="MaterialDesignThemes.MahApps" Version="0.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="CloudflareDDNS.ico">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\CloudflareDDNS.png" />
   </ItemGroup>
 
 </Project>

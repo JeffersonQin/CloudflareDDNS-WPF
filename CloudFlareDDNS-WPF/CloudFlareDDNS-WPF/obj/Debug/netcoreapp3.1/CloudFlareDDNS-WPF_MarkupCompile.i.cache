@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\JeffersonQin\Documents\Coding\CloudflareDDNS-WPF\CloudFlareDDNS-WPF\CloudFlareDDNS-WPF\App.xaml
-22112506696
+4648823842
 
-71986168895
+91446102277
 220-549397022
-AboutWindow.xaml;MainWindow.xaml;
+AboutWindow.xaml;MainWindow.xaml;Pages\ConfigurationPage.xaml;Pages\ConsolePage.xaml;
 
-True
+False
 
