@@ -1,12 +1,106 @@
-﻿<Window x:Class="CloudFlareDDNS_WPF.MainWindow"
+﻿<mah:MetroWindow x:Class="CloudFlareDDNS_WPF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CloudFlareDDNS_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        WindowStartupLocation="CenterScreen"
+        Title="" Height="450" Width="800">
+    
+    <!--左上角GitHub图标-->
+    <mah:MetroWindow.LeftWindowCommands>
+        <mah:WindowCommands>
+            <Button Click="LaunchGitHubSite" ToolTip="Open up the GitHub site">
+                <iconPacks:PackIconModern 
+                    Width="22"
+                    Height="22"
+                    Kind="SocialGithubOctocat" />
+            </Button>
+        </mah:WindowCommands>
+    </mah:MetroWindow.LeftWindowCommands>
+    
+    <!--右上角About + 图标-->
+    <mah:MetroWindow.RightWindowCommands>
+        <mah:WindowCommands>
+            <Button Click="LaunchAboutWindow" Content="About">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconMaterial Width="20"
+                                Height="20"
+                                VerticalAlignment="Center" Kind="InformationOutline" />
+                            <TextBlock Margin="4 0 0 0"
+                                VerticalAlignment="Center"
+                                Text="{Binding}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+        </mah:WindowCommands>
+    </mah:MetroWindow.RightWindowCommands>
 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <!--上方的控制按钮-->
+        <Grid Grid.ColumnSpan="2" Grid.Row="0" Background="{StaticResource PrimaryHueMidBrush}">
+            <Button x:Name="DDNSButton" Click="DDNSOperation" Content="▶  Start DDNS" Margin="20, 20, 20, 20" Height="50" Grid.Column="0" Background="MediumSeaGreen" BorderBrush="MediumSeaGreen" Cursor="Hand"/>
+        </Grid>
+        <!--左侧边栏外部封装的Grid-->
+        <Grid HorizontalAlignment="Stretch" Grid.Column="0" Grid.Row="1" Background="{StaticResource PrimaryHueMidBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <ScrollViewer HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="0">
+                <StackPanel x:Name="Menu" Margin="10">
+                    <!--Configuration按钮-->
+                    <Button Click="ShowConfiguration" Content="Configuration" Margin="0, 0, 0, 10" Height="50" Cursor="Hand">
+                        <Button.ContentTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <iconPacks:PackIconUnicons Kind="Setting"
+                                        Width="20"
+                                        Height="20"
+                                        VerticalAlignment="Center" />
+                                    <TextBlock Margin="15 0 0 0"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </Button.ContentTemplate>
+                    </Button>
+                    <!--Console按钮-->
+                    <Button Click="ShowConsole" Content="Console" Margin="0, 10, 0, 10" Height="50">
+                        <Button.ContentTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <iconPacks:PackIconMaterial Kind="Console"
+                                        Width="20"
+                                        Height="20"
+                                        VerticalAlignment="Center" />
+                                    <TextBlock Margin="15 0 0 0"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </Button.ContentTemplate>
+                    </Button>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+        <!--空白部分，用于Nagivation-->
+        <Frame Name="navigationFrame" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.Row="1"></Frame>
     </Grid>
-</Window>
+
+
+</mah:MetroWindow>

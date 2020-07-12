@@ -1,0 +1,20 @@
+﻿<Page x:Class="CloudFlareDDNS_WPF.Pages.ConsolePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+      xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:CloudFlareDDNS_WPF.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ConsolePage">
+
+    <ScrollViewer Background="GhostWhite" HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+        <StackPanel>
+            <TextBlock FontSize="30" Margin="20, 20, 20, 20">Console Panel</TextBlock>
+            <TextBlock FontSize="15" Margin="20, 0, 20, 5" x:Name="ConsoleTextBlock" TextWrapping="Wrap">Contents</TextBlock>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
