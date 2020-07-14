@@ -16,10 +16,10 @@
             <TextBlock FontSize="30" Margin="20, 20, 20, 20">Configuration Panel</TextBlock>
             <TextBlock FontSize="20" Margin="20, 0, 20, 5">X-AUTH-KEY</TextBlock>
             <TextBlock FontSize="14" Margin="20, 0, 20, 5" Foreground="SlateGray" TextWrapping="Wrap">Global API Key</TextBlock>
-            <PasswordBox x:Name="X_AUTH_KEY_Box" FontSize="16" Margin="20, 0, 20, 20"></PasswordBox>
+            <TextBox x:Name="X_AUTH_KEY_Box" FontSize="16" Margin="20, 0, 20, 20"></TextBox>
             <TextBlock FontSize="20" Margin="20, 0, 20, 5">Zone ID</TextBlock>
             <TextBlock FontSize="14" Margin="20, 0, 20, 5" Foreground="SlateGray" TextWrapping="Wrap">Can be checked on the Cloudflare page of your website</TextBlock>
-            <PasswordBox x:Name="Zone_ID_Box" FontSize="16" Margin="20, 0, 20, 20"></PasswordBox>
+            <TextBox x:Name="Zone_ID_Box" FontSize="16" Margin="20, 0, 20, 20"></TextBox>
             <TextBlock FontSize="20" Margin="20, 0, 20, 5">E-mail</TextBlock>
             <TextBlock FontSize="14" Margin="20, 0, 20, 5" Foreground="SlateGray" TextWrapping="Wrap">E-mail for your Cloudflare Accout</TextBlock>
             <TextBox x:Name="Email_Box" FontSize="16" Margin="20, 0, 20, 20"></TextBox>
