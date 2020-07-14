@@ -21,6 +21,13 @@ namespace CloudFlareDDNS_WPF
         public AboutWindow()
         {
             InitializeComponent();
+            TitleText.Text = CfDdnsProperty.SHOW_NAME;
+            VersionText.Text = CfDdnsProperty.VERSION_CODE;
+        }
+
+        private void HomepageText_Click(object sender, RoutedEventArgs e)
+        {
+            Helper.OpenWebsite(CfDdnsProperty.HOME_PAGE);
         }
     }
 }

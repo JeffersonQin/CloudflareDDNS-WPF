@@ -6,11 +6,13 @@
     <RootNamespace>CloudFlareDDNS_WPF</RootNamespace>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>CloudflareDDNS.ico</ApplicationIcon>
+    <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="CloudflareDDNS.ico" />
     <None Remove="CloudflareDDNS.png" />
+    <None Remove="Images\Background.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +27,7 @@
     <Resource Include="CloudflareDDNS.ico">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\Background.png" />
     <Resource Include="Images\CloudflareDDNS.png" />
   </ItemGroup>
 

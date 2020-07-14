@@ -8,12 +8,15 @@
         xmlns:local="clr-namespace:CloudFlareDDNS_WPF"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="About" Height="400" Width="200">
+        Title="About" Height="500" Width="300">
+    <mah:MetroWindow.Background>
+        <ImageBrush ImageSource="/Images/Background.png" Stretch="UniformToFill"/>
+    </mah:MetroWindow.Background>
     <StackPanel>
-        <Image Source="/Images/CloudflareDDNS.png" Margin="15"></Image>
-        <TextBlock x:Name="TitleText"></TextBlock>
-        <TextBlock x:Name="VersionText"></TextBlock>
-        <TextBlock x:Name="AuthorText"></TextBlock>
+        <Image Source="/Images/CloudflareDDNS.png" Margin="40, 40, 40, 0"></Image>
+        <TextBlock TextAlignment="Center" x:Name="TitleText" FontSize="25"></TextBlock>
+        <TextBlock TextAlignment="Center" x:Name="VersionText" FontSize="15" Margin="10"></TextBlock>
+        <TextBlock TextAlignment="Center" x:Name="AuthorText"></TextBlock>
 
     </StackPanel>
 </mah:MetroWindow>
