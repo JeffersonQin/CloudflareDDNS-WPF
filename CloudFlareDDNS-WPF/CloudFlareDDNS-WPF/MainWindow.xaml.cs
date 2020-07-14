@@ -29,21 +29,26 @@ namespace CloudFlareDDNS_WPF
         public MainWindow()
         {
             InitializeComponent();
+
+            #region UI初始化
             this.Title = CfDdnsProperty.SHOW_NAME;
+            #endregion
+
+            #region 系统托盘
+            
+            #endregion
+
+            #region 页面导航初始化
             ddnsViews.Add("Configuration", new Uri("Pages/ConfigurationPage.xaml", UriKind.Relative));
             ddnsViews.Add("Console", new Uri("Pages/ConsolePage.xaml", UriKind.Relative));
             navigationFrame.Navigate(ddnsViews["Configuration"]);
+            #endregion
         }
 
         private void LaunchGitHubSite(object sender, RoutedEventArgs e)
         {
             // Launch the GitHub site...
-            var psi = new ProcessStartInfo
-            {
-                FileName = CfDdnsProperty.HOME_PAGE,
-                UseShellExecute = true
-            };
-            Process.Start(psi);
+            Helper.OpenWebsite(CfDdnsProperty.HOME_PAGE);
         }
         private void LaunchAboutWindow(object sender, RoutedEventArgs e)
         {
