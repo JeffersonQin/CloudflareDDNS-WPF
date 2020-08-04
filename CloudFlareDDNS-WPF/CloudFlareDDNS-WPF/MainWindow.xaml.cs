@@ -1,20 +1,11 @@
-﻿using MahApps.Metro.Controls;
-using MahApps.Metro.IconPacks;
+﻿using CloudFlareDDNS_WPF.Config;
+using CloudFlareDDNS_WPF.Lib;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace CloudFlareDDNS_WPF
 {
@@ -30,6 +21,21 @@ namespace CloudFlareDDNS_WPF
         {
             InitializeComponent();
 
+            #region 查看API文件是否存在
+            if (!File.Exists(CfDdnsProperty.CONFIG_FILE_PATH + CfDdnsProperty.CONFIG_API_FILE_NAME))
+            {
+                Helper.ResetAPIConfiguration();
+            }
+            #endregion
+
+            #region 读取XML中的Config信息
+            XMLReader<UserConfigurationData>.read(CfDdnsProperty.CONFIG_FILE_PATH, CfDdnsProperty.CONFIG_FILE_NAME).save();
+            #endregion
+
+            #region 退出询问
+            this.Closing += Window_Closing;
+            #endregion
+
             #region UI初始化
             this.Title = CfDdnsProperty.SHOW_NAME;
             #endregion
@@ -44,7 +50,7 @@ namespace CloudFlareDDNS_WPF
             navigationFrame.Navigate(ddnsViews["Configuration"]);
             #endregion
         }
-
+        
         private void LaunchGitHubSite(object sender, RoutedEventArgs e)
         {
             // Launch the GitHub site...
@@ -73,7 +79,7 @@ namespace CloudFlareDDNS_WPF
 
         private void DDNSOperation(object sender, RoutedEventArgs e)
         {
-            
+            XMLWriter<UserConfigurationData>.write(UserConfiguration.GetUserConfigurationData(), CfDdnsProperty.CONFIG_FILE_PATH, CfDdnsProperty.CONFIG_FILE_NAME);
             if ((string)DDNSButton.Content == "▶  Start DDNS")
             {
                 DDNSButton.Content = "█  Stop DDNS";
@@ -84,6 +90,20 @@ namespace CloudFlareDDNS_WPF
                 DDNSButton.Content = "▶  Start DDNS";
                 DDNSButton.Background = new SolidColorBrush(Color.FromRgb(60, 179, 113));
                 DDNSButton.BorderBrush = new SolidColorBrush(Color.FromRgb(60, 179, 113));
+            }
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            
+            if (MessageBox.Show("Do you really want to quit?", "Confirm", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                e.Cancel = false;
+                XMLWriter<UserConfigurationData>.write(UserConfiguration.GetUserConfigurationData(), CfDdnsProperty.CONFIG_FILE_PATH, CfDdnsProperty.CONFIG_FILE_NAME);
+            }
+            else
+            {
+                e.Cancel = true;
             }
         }
 

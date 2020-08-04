@@ -16,25 +16,54 @@
             <TextBlock FontSize="30" Margin="20, 20, 20, 20">Configuration Panel</TextBlock>
             <TextBlock FontSize="20" Margin="20, 0, 20, 5">X-AUTH-KEY</TextBlock>
             <TextBlock FontSize="14" Margin="20, 0, 20, 5" Foreground="SlateGray" TextWrapping="Wrap">Global API Key</TextBlock>
-            <TextBox x:Name="X_AUTH_KEY_Box" FontSize="16" Margin="20, 0, 20, 20"></TextBox>
+            <TextBox x:Name="X_AUTH_KEY_Box" FontSize="16" Margin="20, 0, 20, 20" TextChanged="X_AUTH_KEY_Box_TextChanged"></TextBox>
             <TextBlock FontSize="20" Margin="20, 0, 20, 5">Zone ID</TextBlock>
             <TextBlock FontSize="14" Margin="20, 0, 20, 5" Foreground="SlateGray" TextWrapping="Wrap">Can be checked on the Cloudflare page of your website</TextBlock>
-            <TextBox x:Name="Zone_ID_Box" FontSize="16" Margin="20, 0, 20, 20"></TextBox>
+            <TextBox x:Name="Zone_ID_Box" FontSize="16" Margin="20, 0, 20, 20" TextChanged="Zone_ID_Box_TextChanged"></TextBox>
             <TextBlock FontSize="20" Margin="20, 0, 20, 5">E-mail</TextBlock>
             <TextBlock FontSize="14" Margin="20, 0, 20, 5" Foreground="SlateGray" TextWrapping="Wrap">E-mail for your Cloudflare Accout</TextBlock>
-            <TextBox x:Name="Email_Box" FontSize="16" Margin="20, 0, 20, 20"></TextBox>
-            <TextBlock FontSize="20" Margin="20, 0, 20, 5">DNS Record Name</TextBlock>
-            <TextBlock FontSize="14" Margin="20, 0, 20, 5" Foreground="SlateGray" TextWrapping="Wrap">Name of your DNS Record (Not URL), which is the abbreviation of your secondary URL</TextBlock>
-            <TextBox x:Name="DNS_Record_Box" FontSize="16" Margin="20, 0, 20, 20"></TextBox>
+            <TextBox x:Name="Email_Box" FontSize="16" Margin="20, 0, 20, 20" TextChanged="Email_Box_TextChanged"></TextBox>
             <TextBlock FontSize="20" Margin="20, 0, 20, 5">Website URL</TextBlock>
             <TextBlock FontSize="14" Margin="20, 0, 20, 5" Foreground="SlateGray" TextWrapping="Wrap">URL of your website to DDNS</TextBlock>
-            <TextBox x:Name="Website_URL_Box" FontSize="16" Margin="20, 0, 20, 20"></TextBox>
+            <TextBox x:Name="Website_URL_Box" FontSize="16" Margin="20, 0, 20, 20" TextChanged="Website_URL_Box_TextChanged"></TextBox>
             <TextBlock FontSize="20" Margin="20, 0, 20, 5">Auto Start DDNS</TextBlock>
             <TextBlock FontSize="14" Margin="20, 0, 20, 5" Foreground="SlateGray" TextWrapping="Wrap">Auto start the DDNS Service when program activates</TextBlock>
-            <mah:ToggleSwitch x:Name="AutoStartSwitch" Margin="20, 0, 20, 5"></mah:ToggleSwitch>
+            <mah:ToggleSwitch x:Name="AutoStartSwitch" Margin="20, 0, 20, 5" Toggled="AutoStartSwitch_Toggled"></mah:ToggleSwitch>
             <TextBlock FontSize="20" Margin="20, 0, 20, 5">Activates when start up</TextBlock>
             <TextBlock FontSize="14" Margin="20, 0, 20, 5" Foreground="SlateGray" TextWrapping="Wrap">Auto start the program when computer starts up</TextBlock>
-            <mah:ToggleSwitch x:Name="AutoStartUpSwitch" Margin="20, 0, 20, 5"></mah:ToggleSwitch>
+            <mah:ToggleSwitch x:Name="AutoStartUpSwitch" Margin="20, 0, 20, 5" Toggled="AutoStartUpSwitch_Toggled"></mah:ToggleSwitch>
+            <TextBlock FontSize="20" Margin="20, 0, 20, 5">API Configuration</TextBlock>
+            <TextBlock FontSize="14" Margin="20, 0, 20, 5" Foreground="SlateGray" TextWrapping="Wrap">For API configuration, please edit the API configuration file directly</TextBlock>
+            <Button Content="Open API Configuration File" Margin="20, 10, 20, 10" Height="50" Cursor="Hand" Click="OpenAPIConfiguration">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconMaterial Kind="HammerScrewdriver"
+                                        Width="20"
+                                        Height="20"
+                                        VerticalAlignment="Center" />
+                            <TextBlock Margin="15 0 0 0"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            <Button Content="Reset API Configuration File" Margin="20, 10, 20, 10" Height="50" Click="ResetAPIConfiguraion">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconIonicons Kind="RefreshMD" 
+                                        Width="20"
+                                        Height="20"
+                                        VerticalAlignment="Center" />
+                            <TextBlock Margin="15 0 0 0"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
         </StackPanel>
     </ScrollViewer>
 </Page>
