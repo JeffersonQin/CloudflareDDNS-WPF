@@ -1,4 +1,6 @@
-﻿using MahApps.Metro.Controls;
+﻿using CloudFlareDDNS_WPF.Config;
+using CloudFlareDDNS_WPF.Lib;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Text;
